@@ -19,7 +19,9 @@ Route::get('/', function () {
 });
 
 
-Route::get('/blogs', [BlogController::class, 'blogs']);
+Route::get('/blogs', [BlogController::class, 'blogs'])->name('blogs');
+Route::get('/blog-edit/{id}', [BlogController::class, 'edit'])->name('blog.edit');
+Route::put('/blog-update/{id}', [BlogController::class, 'update'])->name('blog.update');
 
 Auth::routes();
 

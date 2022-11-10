@@ -12,7 +12,8 @@
                 <div class="card-body">
                    <h1>{{ $blog->title }}</h1>
                    <p>{{ $blog->description }}</p>
-                   <button class="btn btn-success btm-sm">Edit</button>
+                   <a class="btn btn-success btm-sm" href="{{ route('blog.edit', $blog->id) }}">Edit</a>
+                   
                 <button class="btn btn-danger btm-sm">Delete</button>
                 </div>
                 
